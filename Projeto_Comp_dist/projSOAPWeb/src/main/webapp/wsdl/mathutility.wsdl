@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions name="MathUtilityService" targetNamespace="http://default_package/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:tns="http://default_package/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/">
+  <wsdl:types>
+    <schema xmlns="http://www.w3.org/2001/XMLSchema">
+  <import namespace="http://default_package/" schemaLocation="mathutility_schema1.xsd"/>
+</schema>
+  </wsdl:types>
+  <wsdl:message name="valida_praiaResponse">
+    <wsdl:part name="parameters" element="tns:valida_praiaResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="valida_numResponse">
+    <wsdl:part name="parameters" element="tns:valida_numResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="valida_praia">
+    <wsdl:part name="parameters" element="tns:valida_praia">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="funcListarResponse">
+    <wsdl:part name="parameters" element="tns:funcListarResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="valida_hora">
+    <wsdl:part name="parameters" element="tns:valida_hora">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="funcCancelar">
+    <wsdl:part name="parameters" element="tns:funcCancelar">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="valida_horaResponse">
+    <wsdl:part name="parameters" element="tns:valida_horaResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="funcReservar">
+    <wsdl:part name="parameters" element="tns:funcReservar">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="funcListar">
+    <wsdl:part name="parameters" element="tns:funcListar">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="funcCancelarResponse">
+    <wsdl:part name="parameters" element="tns:funcCancelarResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="funcReservarResponse">
+    <wsdl:part name="parameters" element="tns:funcReservarResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="valida_num">
+    <wsdl:part name="parameters" element="tns:valida_num">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:portType name="MathUtility">
+    <wsdl:operation name="valida_praia">
+      <wsdl:input name="valida_praia" message="tns:valida_praia">
+    </wsdl:input>
+      <wsdl:output name="valida_praiaResponse" message="tns:valida_praiaResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="valida_hora">
+      <wsdl:input name="valida_hora" message="tns:valida_hora">
+    </wsdl:input>
+      <wsdl:output name="valida_horaResponse" message="tns:valida_horaResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="funcCancelar">
+      <wsdl:input name="funcCancelar" message="tns:funcCancelar">
+    </wsdl:input>
+      <wsdl:output name="funcCancelarResponse" message="tns:funcCancelarResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="funcReservar">
+      <wsdl:input name="funcReservar" message="tns:funcReservar">
+    </wsdl:input>
+      <wsdl:output name="funcReservarResponse" message="tns:funcReservarResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="funcListar">
+      <wsdl:input name="funcListar" message="tns:funcListar">
+    </wsdl:input>
+      <wsdl:output name="funcListarResponse" message="tns:funcListarResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="valida_num">
+      <wsdl:input name="valida_num" message="tns:valida_num">
+    </wsdl:input>
+      <wsdl:output name="valida_numResponse" message="tns:valida_numResponse">
+    </wsdl:output>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="MathUtilityServiceSoapBinding" type="tns:MathUtility">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="valida_praia">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="valida_praia">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="valida_praiaResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="funcCancelar">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="funcCancelar">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="funcCancelarResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="valida_hora">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="valida_hora">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="valida_horaResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="funcReservar">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="funcReservar">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="funcReservarResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="funcListar">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="funcListar">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="funcListarResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="valida_num">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="valida_num">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="valida_numResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="MathUtilityService">
+    <wsdl:port name="MathUtilityPort" binding="tns:MathUtilityServiceSoapBinding">
+      <soap:address location="http://localhost:8080/proj2/services"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
